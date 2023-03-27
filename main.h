@@ -7,10 +7,10 @@
 #include <unistd.h>
 #include <limits.h>
 
-#define OUTPUT_BUF_SIZE 1024
-#define BUF_FLUSH -1
+#define OUTPUT_BUFF_SIZE 1024
+#define BUFF_FLUSH -1
 
-#define FIELD_BUF_SIZE 50
+#define FIELD_BUFF_SIZE 50
 
 #define NULL_STRING "(null)"
 
@@ -61,6 +61,7 @@ typedef struct parameters
  * @specifier: format token
  * @f: The function associated
  */
+
 typedef struct specifier
 {
 	char *specifier;

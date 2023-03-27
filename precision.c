@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * get_precision - gets the precision from the format string
@@ -23,8 +24,22 @@ char *get_precision(char *s, params_t *params, va_list ap)
 	else
 	{
 		while (_isdigit(*s))
-			d = d * 10 + (*s++ - '0');
+			d *= 10;
+			d += (*s- '0');
+			s++;
 	}
-	params->precision = d;
+
+	switch (*s) {
+		case 'r':
+		case 'f':
+		case 'e':
+		case 'g':
+		case 's':
+		case 'p':
+			params->precision = d;
+			break;
+		default:
+			break;
+	}
 	return (s);
 }
