@@ -27,13 +27,6 @@ char *get_precision(char *s, params_t *params, va_list ap)
 			d *= 10 + (*s++ - '0');
 	}
 
-	switch (*s)
-	{
-		case 'r':
-			params->precision = d;
-			break;
-		default:
-			break;
-	}
+	params->precision = d;
 	return (s);
 }
