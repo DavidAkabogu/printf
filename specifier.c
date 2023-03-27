@@ -37,7 +37,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 
 /**
@@ -53,7 +53,10 @@ int get_print_func(char *s, va_list ap, params_t *params)
 	int (*f)(va_list, params_t *) = get_specifier(s);
 
 	if (f)
+	{
 		return (f(ap, params));
+	}
+
 	return (0);
 }
 
@@ -87,6 +90,7 @@ int get_flag(char *s, params_t *params)
 			i = params->zero_flag = 1;
 			break;
 	}
+
 	return (i);
 }
 
@@ -110,6 +114,7 @@ int get_modifier(char *s, params_t *params)
 			i = params->l_modifier = 1;
 			break;
 	}
+
 	return (i);
 }
 
@@ -123,18 +128,22 @@ int get_modifier(char *s, params_t *params)
 
 char *get_width(char *s, params_t *params, va_list ap)
 {
-	int d = 0;
+	int i = 0;
 
 	if (*s == '*')
 	{
-		d = va_arg(ap, int);
+		i = va_arg(ap, int);
 		s++;
 	}
 	else
 	{
 		while (_isdigit(*s))
-			d = d * 10 + (*s++ - '0');
+		{
+			i = i * 10 + (*s++ - '0');
+		}
 	}
-	params->width = d;
+
+	params->width = i;
+
 	return (s);
 }
