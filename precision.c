@@ -24,19 +24,12 @@ char *get_precision(char *s, params_t *params, va_list ap)
 	else
 	{
 		while (_isdigit(*s))
-			d *= 10;
-			d += (*s - '0');
-			s++;
+			d *= 10 + (*s++ - '0');
 	}
 
 	switch (*s)
 	{
 		case 'r':
-		case 'f':
-		case 'e':
-		case 'g':
-		case 's':
-		case 'p':
 			params->precision = d;
 			break;
 		default:
