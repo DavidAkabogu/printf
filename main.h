@@ -40,7 +40,7 @@ typedef struct parameters
 	unsigned int h_modifier		: 1;
 	unsigned int l_modifier		: 1;
 	unsigned int width;
-        unsigned int precision;
+	unsigned int precision;
 } params_t;
 
 /**
