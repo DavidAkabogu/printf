@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <limits.h>
+#include <string.h>
 
 #define BUFFER -1
 #define O_BUFF 1024
