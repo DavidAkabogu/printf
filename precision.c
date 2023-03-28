@@ -2,10 +2,10 @@
 #include <string.h>
 
 /**
- * get_precision - gets the precision from the format string
+ * get_precision - this function gets the precision from the format string
  * @s: the format string
  * @params: the parameters struct
- * @ap: the argument pointer
+ * @ap: argument pointer
  * Return: new pointer
 */
 
