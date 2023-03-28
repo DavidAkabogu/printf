@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts - prints a string with newline
+ * _puts - prints a string
  * @str: the string to print
  * Return: str - a
  */
@@ -20,7 +20,7 @@ int _puts(char *str)
 
 /**
  * _putchar - writes the character c to stdout
- * @c: The character to print
+ * @c: character to print
  * Return: 1 on success. -1 on error.
  */
 
