@@ -2,12 +2,11 @@
 
 /**
  * get_specifier - this function finds the format function
- * @s: string of the format
- * Return: the number of bytes printed
+ * @s: string format
+ * Return: Returns the number of bytes printed
  */
 
 int (*get_specifier(char *s))(va_list ap, params_t *params)
-
 {
 	specifier_t specifiers[] = {
 		{"c", print_char},
