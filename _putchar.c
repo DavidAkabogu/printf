@@ -27,17 +27,17 @@ int _puts(char *str)
 int _putchar(int c)
 {
 	static int i;
-	static char buf[OUTPUT_BUFF_SIZE];
+	static char buff[O_BUFF];
 
-	if (c == BUFF_FLUSH || i >= OUTPUT_BUFF_SIZE)
+	if (c == BUFFER || i >= O_BUFF)
 	{
-		write(1, buf, i);
+		write(1, buff, i);
 		i = 0;
 	}
 
-	if (c != BUFF_FLUSH)
+	if (c != BUFFER)
 	{
-		buf[i++] = c;
+		buff[i++] = c;
 	}
 
 	return (1);

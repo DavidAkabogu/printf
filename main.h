@@ -7,9 +7,8 @@
 #include <unistd.h>
 #include <limits.h>
 
-#define BUFF_FLUSH -1
-#define FIELD_BUFF_SIZE 50
-#define OUTPUT_BUFF_SIZE 1024
+#define BUFFER -1
+#define O_BUFF 1024
 #define NULL_STRING "(null)"
 #define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 #define CONVERT_LOWERCASE 1

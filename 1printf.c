@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 		else
 			sum += get_print_func(p, ap, &params);
 	}
-	_putchar(BUFF_FLUSH);
+	_putchar(BUFFER);
 	va_end(ap);
 
 	return (sum);
