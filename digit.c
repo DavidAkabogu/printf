@@ -3,8 +3,7 @@
 /**
  * init_params - clears struct fields and resets buffer
  * @params: the parameters struct
- * @ap: the argument pointer
- * Return: void
+ * @ap: argument pointer
  */
 
 void init_params(params_t *params, va_list ap)
